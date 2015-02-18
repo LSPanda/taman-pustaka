@@ -7,7 +7,10 @@ header.header
                 | Taman
                 span.title__second pustaka
         div.inline-block.header__logo
-            img(src="#", alt="Logo de la Bibliothèque Taman pustaka").logo__img
+            if current.logoIndex
+                img(src="css/images/logo.png", alt="Logo de la Bibliothèque Taman pustaka").logo__img
+            else
+                img(src="../css/images/logo.png", alt="Logo de la Bibliothèque Taman pustaka").logo__img
         div.header__cite
             cite.cite__text
     nav.header__nav
