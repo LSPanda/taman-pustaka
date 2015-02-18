@@ -6,6 +6,7 @@
 
 
 // Header style
+// - Position of title + style
 .header__heading
     width 100%
 .heading__title
@@ -33,9 +34,21 @@
     font-style italic
     rem-fallback( margin-top, -4px )
 
+// - Navigation + search form
 .header__navigation
-    rem-fallback( margin-top, 20px )
+    rem-fallback( margin-top, 24px )
 .navigation__nav
     float left
+.nav__element
+    rem-fallback( font-size, 20px )
+    font-family wf_font-heading
+    text-transform uppercase
+    rem-fallback( margin-right, 16px )
+.element__link
+    color wf_nav-color
+    &:hover
+        color wf_nav-color-hover
+        rem-fallback( padding-bottom, 4px )
+        border-bottom 1px solid wf_nav-color-hover
 .navigation__search
     float right
