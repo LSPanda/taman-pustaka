@@ -11,15 +11,18 @@ head
     meta(name="description" content="Write site description here")
     meta(name="viewport" content="width-device-width, initial-scale=1")
     link(rel="icon" type="image/png" href="")
+    link(rel="stylesheet" type='text/css' href="http://fonts.googleapis.com/css?family=Esteban")
+    link(rel="stylesheet" type='text/css' href="http://fonts.googleapis.com/css?family=Montserrat:400,700")
     block style
         link(rel="stylesheet" href="../css/main-min.css")
     script(src="js/vendor/modernizr-2.6.2.min.js")
         
 body
-    block header
-    
-    block content
-    
-    block footer
+    div.wrapper
+        block header
         
-    include script.jade
+        block content
+        
+        block footer
+            
+        include script.jade

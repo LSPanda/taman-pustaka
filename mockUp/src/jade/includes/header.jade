@@ -1,30 +1,26 @@
 //- includes/header.jade
 
-header.header
+header.container
     div.header__heading
-        div.inline-block.header__title    
+        div.heading__title    
             h1.title__main
                 | Taman
                 span.title__second pustaka
-        div.inline-block.header__logo
-            if current.logoIndex
-                img(src="css/images/logo.png", alt="Logo de la Bibliothèque Taman pustaka").logo__img
-            else
-                img(src="../css/images/logo.png", alt="Logo de la Bibliothèque Taman pustaka").logo__img
-        div.header__cite
-            cite.cite__text
-    nav.header__nav
-        h2.hidden Menu de navigation de la bibliothèque
-        span.inline-block.nav__element
-            a(href="#").element__link Accueil
-        span.inline-block.nav__element
-            a(href="#").element__link Auteur
-        span.inline-block.nav__element
-            a(href="#").element__link Genre
-        span.inline-block.nav__element
-            a(href="#").element__link Éditeur
-    div.header__search
-        form(action="#" method="post").form__search
-            input(type="text" placeholder="Rechercher")
-            input(type="submit")
+        div.heading__cite
+            cite.cite__main Nourissez votre esprit mieux que nulle part ailleurs !
+    div.header__navigation.clearfix
+        nav.navigation__nav
+            h2.hidden Menu de navigation de la bibliothèque
+            span.inline-block.nav__element
+                a(href="#").element__link Accueil
+            span.inline-block.nav__element
+                a(href="#").element__link Auteur
+            span.inline-block.nav__element
+                a(href="#").element__link Genre
+            span.inline-block.nav__element
+                a(href="#").element__link Éditeur
+        div.navigation__search
+            form(action="#" method="post").form__search
+                input(type="text" placeholder="Rechercher")
+                input(type="submit")
             

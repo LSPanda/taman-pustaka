@@ -1,0 +1,41 @@
+///*------------------------------------*\
+//    #COMPONENTS HEADER
+//\*------------------------------------*/
+
+
+
+
+// Header style
+.header__heading
+    width 100%
+.heading__title
+    position relative
+    &:after
+        display block
+        content ""
+        rem-fallback( width, 60px )
+        rem-fallback( height, 60px )
+        position absolute
+        rem-fallback( top, 8px )
+        rem-fallback( left, 286px )
+        background url( "images/sprite.png" ) -10px -10px
+.title__main
+    font-weight bold
+    font-variant small-caps
+    padding 0
+    margin 0
+.title__second
+    rem-fallback( margin-left, wf_font-size )
+    font-weight normal
+.cite__main
+    display block
+    font-size wf_font-size * 1.15
+    font-style italic
+    rem-fallback( margin-top, -4px )
+
+.header__navigation
+    rem-fallback( margin-top, 20px )
+.navigation__nav
+    float left
+.navigation__search
+    float right
