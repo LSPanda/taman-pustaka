@@ -1,4 +1,27 @@
 //- includes/header.jade
 
-header
-    h1 Head par defaut de ma maquette
+header.header
+    div.header__heading
+        div.inline-block.header__title    
+            h1.title__main
+                | Taman
+                span.title__second pustaka
+        div.inline-block.header__logo
+            img(src="#", alt="Logo de la Bibliothèque Taman pustaka").logo__img
+        div.header__cite
+            cite.cite__text
+    nav.header__nav
+        h2.hidden Menu de navigation de la bibliothèque
+        span.inline-block.nav__element
+            a(href="#").element__link Accueil
+        span.inline-block.nav__element
+            a(href="#").element__link Auteur
+        span.inline-block.nav__element
+            a(href="#").element__link Genre
+        span.inline-block.nav__element
+            a(href="#").element__link Éditeur
+    div.header__search
+        form(action="#" method="post").form__search
+            input(type="text" placeholder="Rechercher")
+            input(type="submit")
+            
