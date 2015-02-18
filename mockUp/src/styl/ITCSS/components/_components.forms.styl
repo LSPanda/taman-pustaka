@@ -1,0 +1,34 @@
+///*------------------------------------*\
+//    #COMPONENTS FORMS
+//\*------------------------------------*/
+
+
+
+
+// Forms style
+// - Habitual style
+.forms__input--pattern
+    width 100%
+    color wf_form-color
+    border 1px solid wf_background-boxes
+    rem-fallback( padding, 4px 8px )
+    &:focus
+        background wf_form-background-color-focus
+
+// - Search forms
+.form__search
+    position relative
+.search__seek
+    rem-fallback( font-size, 14px )
+    rem-fallback( min-width, 265px )
+.search__validate
+    position: absolute
+    rem-fallback( width, 20px )
+    rem-fallback( height, 20px )
+    rem-fallback( top, 5px )
+    rem-fallback( right, 5px )
+    background url( "images/sprite.png" ) -80px -10px
+    rem-fallback( padding, 12px )
+    border none
+    cursor pointer
+    rem-fallback( text-indent, 100000px )
