@@ -9,11 +9,42 @@ block style
     link(rel="stylesheet" href="css/main-min.css")
 
 block header
-    - var current = { logoIndex: 'Path for my logo' }
     include includes/header.jade
     
 block content
-    p Template personnel de maquette, utilisant Jade et Stylus.
+    - var current = { profilPicture: 'Path for my picture' }
+    div.clearfix    
+        section.main__content
+            h2.hidden Lister notre bibliothèque par...
+            section.container
+                h3.hidden Genres
+                p test
+            section.container
+                h3.hidden Auteurs
+                p test
+            section.container
+                h3.hidden Éditeurs
+                p test
+        section.main__feature
+            h2.hidden Votre compte personnel
+            //- Non connecté
+            section.feature__account.container
+                h3.hidden Connectez-vous
+                div.account__profil
+                    div.block
+                        img(src="css/images/profil.gif", alt="").profil__img
+                    a(href="#") Connectez-vous
+                    p
+                        | Pas encore inscrit&nbsp;? 
+                        a(href="#") Inscivez-vous&nbsp;!
+            //- Connecté
+            section.feature__account.container
+                h3.hidden Accès à votre compte
+                div.account__profil
+                    div.block
+                        img(src="css/images/login.jpg", alt="").profil__img                    
+                    a(href="#") (administration)
+                    p Bienvenue, Simon 
 
 block footer
     include includes/footer.jade
