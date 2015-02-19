@@ -1,0 +1,41 @@
+///*------------------------------------*\
+//    #COMPONENTS CONTENT
+//\*------------------------------------*/
+
+
+
+
+// Feature style
+.content__short
+    rem-fallback( height, 307px )
+.content__genre, .content__author, .content__editor
+    transition( all, 0.25s )
+    opacity 0.5
+    &:hover
+        opacity 1
+.content__genre
+    float left
+    width 49%
+    height 100%
+.content__author, .content__editor
+    float right
+    width 49%
+    height 46.25%
+
+.category
+    color white
+    text-transform uppercase
+    margin 0
+    padding 0
+.category_img
+    position absolute
+    top 0
+    left 0
+
+//- Display img
+.content__genre
+    background url( "images/links/category1.jpg" ) no-repeat
+.content__author
+    background url( "images/links/category2.jpg" ) no-repeat
+.content__editor
+    background url( "images/links/category3.jpg" ) no-repeat

@@ -16,15 +16,19 @@ block content
     div.clearfix    
         section.main__content
             h2.hidden Lister notre bibliothèque par...
-            section.container
-                h3.hidden Genres
-                p test
-            section.container
-                h3.hidden Auteurs
-                p test
-            section.container
-                h3.hidden Éditeurs
-                p test
+            div.content__short.clearfix
+                a(href="#")
+                    section.container.content__genre
+                        h3.hidden Genres
+                        p.gamma.category Genre
+                a(href="#")    
+                    section.container.content__author
+                        h3.hidden Auteurs
+                        p.gamma.category Auteur
+                a(href="#")        
+                    section.container.content__editor
+                        h3.hidden Éditeurs
+                        p.gamma.category Éditeur
         section.main__feature
             h2.hidden Votre compte personnel
             //- Non connecté
@@ -32,19 +36,19 @@ block content
                 h3.hidden Connectez-vous
                 div.account__profil
                     div.block
-                        img(src="css/images/profil.gif", alt="").profil__img
+                        img(src="css/images/links/profil.gif", alt="").profil__img
                     a(href="#") Connectez-vous
                     p
                         | Pas encore inscrit&nbsp;? 
                         a(href="#") Inscivez-vous&nbsp;!
             //- Connecté
-            section.feature__account.container
-                h3.hidden Accès à votre compte
-                div.account__profil
-                    div.block
-                        img(src="css/images/login.jpg", alt="").profil__img                    
-                    a(href="#") (administration)
-                    p Bienvenue, Simon 
+                section.feature__account.container
+                    h3.hidden Accès à votre compte
+                    div.account__profil
+                        div.block
+                            img(src="css/images/links/login.jpg", alt="").profil__img                    
+                        a(href="#") (administration)
+                        p Bienvenue, Simon 
 
 block footer
     include includes/footer.jade
