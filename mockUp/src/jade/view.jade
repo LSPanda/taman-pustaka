@@ -3,7 +3,7 @@
 extends includes/layout
 
 block title
-    title Accueil
+    title Filtre
     
 block style
     link(rel="stylesheet" href="css/main-min.css")
@@ -15,20 +15,21 @@ block content
     - var current = { profilPicture: 'Path for my picture' }
     div.clearfix    
         section.main__content
-            h2.hidden Lister notre bibliothèque par...
-            div.content__short.clearfix
-                a(href="filter.html")
-                    section.container.content__genre
-                        h3.hidden Genres
-                        p.gamma.category Genre
-                a(href="filter.html")    
-                    section.container.content__author
-                        h3.hidden Auteurs
-                        p.gamma.category Auteur
-                a(href="filter.html")        
-                    section.container.content__editor
-                        h3.hidden Éditeurs
-                        p.gamma.category Éditeur
+            h2.hidden Liste de...
+            div.clearfix
+                - var numberItem = 0
+                while numberItem < 4
+                    a(href="#")
+                        section.container.filter__content
+                            h3.hidden Le seigneur des anneaux
+                            p.filter__title.epsilon Le seigneur des anneaux
+                            p.filter__extrait Frodon, anneau et le mordor
+                    - numberItem++
+                section.container.filter__content
+                    h3.hidden Pagination
+                    p.filter__title.epsilon Le seigneur des anneaux
+                    p.filter__extrait Frodon, anneau et le mordor
+
         section.main__feature
             h2.hidden Votre compte personnel
             //- Non connecté
