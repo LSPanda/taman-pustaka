@@ -3,7 +3,7 @@
 extends includes/layout
 
 block title
-    title Filtre
+    title Vues
     
 block style
     link(rel="stylesheet" href="css/main-min.css")
@@ -18,17 +18,25 @@ block content
             h2.hidden Liste de...
             div.clearfix
                 - var numberItem = 0
-                while numberItem < 4
-                    a(href="#")
+                while numberItem < 5
+                    a(href="show.html")
                         section.container.filter__content
                             h3.hidden Le seigneur des anneaux
                             p.filter__title.epsilon Le seigneur des anneaux
                             p.filter__extrait Frodon, anneau et le mordor
                     - numberItem++
-                section.container.filter__content
+                section.container.filter__content.pagination
                     h3.hidden Pagination
-                    p.filter__title.epsilon Le seigneur des anneaux
-                    p.filter__extrait Frodon, anneau et le mordor
+                    span.inline-block.pagination__element
+                        a(href="#").block.removeLink.pagination__element--links &lang;&lang;
+                    span.inline-block.pagination__element
+                        a(href="#").block.pagination__element--current 1
+                    span.inline-block.pagination__element
+                        a(href="#").block.pagination__element--links 2
+                    span.inline-block.pagination__element
+                        a(href="#").block.pagination__element--links 3
+                    span.inline-block.pagination__element
+                        a(href="#").block.removeLink.pagination__element--links &rang;&rang;
 
         section.main__feature
             h2.hidden Votre compte personnel
