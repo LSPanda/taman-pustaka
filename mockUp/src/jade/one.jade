@@ -1,0 +1,43 @@
+//- index.html
+
+extends includes/layout
+
+block title
+    title One
+    
+block style
+    link(rel="stylesheet" href="css/main-min.css")
+
+block header
+    include includes/header.jade
+    
+block content
+    - var current = { profilPicture: 'Path for my picture' }
+    div.clearfix    
+        section.main__content
+            h2.hidden Information sur Nom du livre
+            div.clearfix
+                section.container.clearfix
+                    h3.show__title.gamma Le seigneur des anneaux
+                    p.show__information 
+                        | Écrit par 
+                        a(href="#") Tolkien 
+                        | et éditer par 
+                        a(href="#") Pocket
+                    img(src="css/images/books/i_sda.jpg", alt="Couverture du livre").show__img
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quia, laborum, ipsa delectus quae a sit minima, id alias ea nam, repellat dolore debitis numquam vero inventore error obcaecati illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quia, laborum, ipsa delectus quae a sit minima, id alias ea nam, repellat dolore debitis numquam vero inventore error obcaecati illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quia, laborum, ipsa delectus quae a sit minima, id alias ea nam, repellat dolore debitis numquam vero inventore error obcaecati illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quia, laborum, ipsa delectus quae a sit minima, id alias ea nam, repellat dolore debitis numquam vero inventore error obcaecati illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quia, laborum, ipsa delectus quae a sit minima, id alias ea nam, repellat dolore debitis numquam vero inventore error obcaecati illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quia, laborum, ipsa delectus quae a sit minima, id alias ea nam, repellat dolore debitis numquam vero inventore error obcaecati illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quia, laborum, ipsa delectus quae a sit minima, id alias ea nam, repellat dolore debitis numquam vero inventore error obcaecati illum.
+
+        section.main__feature
+            h2.hidden Votre compte personnel
+            section.feature__account.container
+                h3.hidden Connectez-vous
+                div.account__profil
+                    div.block
+                        img(src="css/images/links/profil.gif", alt="").profil__img
+                    a(href="#") Connectez-vous
+                    p
+                        | Pas encore inscrit&nbsp;? 
+                        a(href="#") Inscivez-vous&nbsp;!
+
+block footer
+    include includes/footer.jade

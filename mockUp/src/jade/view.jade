@@ -15,14 +15,13 @@ block content
     - var current = { profilPicture: 'Path for my picture' }
     div.clearfix    
         section.main__content
-            h2.hidden Liste de...
+            h2.hidden Liste des livres par genre
             div.clearfix
                 - var numberItem = 0
                 while numberItem < 5
-                    a(href="show.html")
+                    a(href="one.html")
                         section.container.filter__content
-                            h3.hidden Le seigneur des anneaux
-                            p.filter__title.epsilon Le seigneur des anneaux
+                            h3.filter__title.epsilon Le seigneur des anneaux
                             p.filter__extrait Frodon, anneau et le mordor
                     - numberItem++
                 section.container.filter__content.pagination

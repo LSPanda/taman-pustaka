@@ -36,6 +36,7 @@ module.exports = function( grunt ) {
 				"files": { // - Add jade's fill to compile here
 					"bin/index.html": "src/jade/main.jade",
 					"bin/view.html": "src/jade/view.jade",
+					"bin/one.html": "src/jade/one.jade",
 					"bin/filter.html": "src/jade/filter.jade"
 				}
 			}
