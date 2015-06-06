@@ -1,12 +1,12 @@
-<div class="footer__content clearfix"><a href="view.html">
+<div class="footer__content clearfix"><a href="?a=show&e=child">
     <section class="container content__child">
       <h2 class="hidden">Livres pour enfants</h2>
       <p class="gamma category">Livres enfants</p>
-    </section></a><a href="view.html">
+  </section></a><a href="?a=show&e=teen">
     <section class="container content__teen">
       <h2 class="hidden">Livres pour adolescents</h2>
       <p class="gamma category">Livres adolescents</p>
-    </section></a><a href="view.html">
+  </section></a><a href="?a=show&e=adult">
     <section class="container content__adult">
       <h2 class="hidden">Livres pour adultes</h2>
       <p class="gamma category">Livres adultes</p>

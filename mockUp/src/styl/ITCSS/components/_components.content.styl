@@ -39,3 +39,20 @@
     background url( "images/links/category2.jpg" ) no-repeat
 .content__editor
     background url( "images/links/category3.jpg" ) no-repeat
+
+//- Random books
+.content__random
+    display block
+    width 100%
+    rem-fallback( margin-top, 32px )
+.random__block
+    display inline-block
+    width 15%
+    vertical-align top
+    rem-fallback( margin, 0 16px )
+    &:hover
+        transition( all, 0.25s )
+        opacity 0.5
+.random__title
+    text-align center
+    rem-fallback( margin-top, 12px )

@@ -1,6 +1,6 @@
 <?php
 
-    class Category extends Model
+    class Book extends Model
     {
         public function __construct()
         {
@@ -9,7 +9,7 @@
 
         public function getAll()
         {
-            $sql = 'SELECT * FROM categories';
+            $sql = 'SELECT * FROM books';
             $pdost = $this -> dbConn -> query( $sql );
 
             return $pdost -> fetchAll();
