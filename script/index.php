@@ -7,6 +7,9 @@
     include( 'configs/config.php' );
     include( CONFIG_DIR . 'routes.php' );
 
+    // Start my session
+    session_start();
+
     // Load my class
     set_include_path( 'controllers' . ':' . 'models' . ':' . get_include_path() );
     spl_autoload_register( function( $class ) {
