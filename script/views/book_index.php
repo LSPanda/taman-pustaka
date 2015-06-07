@@ -23,6 +23,7 @@
 <div class="container content__random">
     <h3 class="gamma">Derniers livres ajoutés à la bibliothèque</h3>
     <?php
+        // Take last five book and showing it random
         $dataBooks = $data[ 'data' ];
         $countData = count( $dataBooks );
         $shuffleData = array_slice( $dataBooks, $countData - 5, $countData );
