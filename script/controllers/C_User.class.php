@@ -73,4 +73,9 @@
             header( 'Location:index.php' );
         }
 
+        public function admin()
+        {
+            return[ 'data' => null, 'view' => 'user_admin.php' ];
+        }
+
     }

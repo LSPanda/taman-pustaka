@@ -11,5 +11,6 @@
         'viewEditor' => 'view/editor',
         'signinUser' => 'signin/user',
         'connectUser' => 'connect/user',
-        'disconnectUser' => 'disconnect/user'
+        'disconnectUser' => 'disconnect/user',
+        'adminUser' => 'admin/user'
     ];
