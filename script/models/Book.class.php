@@ -25,7 +25,7 @@
 
         public function getByBookId( $id )
         {
-            $sql = 'SELECT books.id, books.title, books.cover, books.alt, books.summary, books.author_id as authorId, books.editor_id as editorId, authors.id, authors.name as authorName, authors.wiki, editors.name as editorName, editors.website FROM books JOIN authors ON authors.id = books.author_id JOIN editors ON editors.id = books.editor_id WHERE books.id = :id';
+            $sql = 'SELECT books.id, books.title,books.id as bookId,books.exerc,genre_id,editor_id,author_id,classification_id, books.cover, books.alt, books.summary, books.author_id as authorId, books.editor_id as editorId, authors.id, authors.name as authorName, authors.wiki, editors.name as editorName, editors.website FROM books JOIN authors ON authors.id = books.author_id JOIN editors ON editors.id = books.editor_id WHERE books.id = :id';
             $pdost = $this -> dbConn -> prepare( $sql );
             $pdost -> execute( [ ':id' => $id ] );
 
@@ -55,5 +55,10 @@
             $sql = 'INSERT INTO books ( title, alt, summary, exerc, genre_id, editor_id, author_id, classification_id, cover ) VALUES ( :title, :alt, :summary, :exerc, :genre, :editor, :author, :classification, :cover )';
             $pdost = $this -> dbConn -> prepare( $sql );
             $pdost -> execute( [ ':title' => $title, ':alt' => $alt, ':summary' => $summary, ':exerc' => $exerc, ':genre' => $genre, ':editor' => $editor, ':author' => $author, ':classification' => $classification, ':cover' => $address ] );
+        }
+        public function update($id,$title, $alt, $summary, $exerc, $genre, $editor, $author, $classification, $address){
+            $sql='UPDATE books SET title= :title, alt= :alt, :summary= :summary, exerc= :exerc, genre_id= :genre, editor_id= :editor, author_id= :author, classification_id= :classification, cover= :address WHERE id= :id';
+            $pdost = $this -> dbConn -> prepare( $sql );
+            $pdost -> execute( [ ':title' => $title, ':alt' => $alt, ':summary' => $summary, ':exerc' => $exerc, ':genre' => $genre, ':editor' => $editor, ':author' => $author, ':classification' => $classification, ':cover' => $address, ':id' => $id ] );
         }
     }

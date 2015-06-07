@@ -14,6 +14,7 @@
         'disconnectUser' => 'disconnect/user',
         'adminUser' => 'admin/user',
         'createBook' => 'create/book',
-        'createAuthor' => 'create/Author',
-        'createEditor' => 'create/Editor'
+        'createAuthor' => 'create/author',
+        'createEditor' => 'create/editor',
+        'updateBook' => 'update/book'
     ];

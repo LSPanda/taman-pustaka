@@ -125,6 +125,7 @@
                 $title = $request[ 'title' ];
                 $alt = $request[ 'alt' ];
                 $summary = $request[ 'summary' ];
+                $id = $request['id'];
                 $exerc = $request[ 'exerc' ];
                 $genre = $request[ 'genre' ];
                 $editor = $request[ 'editor' ];
@@ -142,9 +143,9 @@
                       die( 'Il y a eu un problème' );
                     }
 
-                    $adress = './css/images/books' . $newname;
+                    $address = './css/images/books' . $newname;
                 }
-                $this -> modeleBook -> update( $title, $alt, $summary, $exerc, $genre, $editor, $author, $classification, $address );
+                $this -> modelBook -> update( $id,$title, $alt, $summary, $exerc, $genre, $editor, $author, $classification, $address );
 
                 header( 'Location:index.php?a=admin&e=user' );
             }
@@ -159,9 +160,10 @@
                 $author = $author -> getAll();
                 $classification = new Classification();
                 $classification = $classification -> getAll();
-                $data = $this -> modeleBook -> getByBookId( $id );
+                $id=$_GET['book_id'];
+                $data = $this -> modelBook -> getByBookId( $id );
 
-                return [ 'view' => $view, 'genre' => $genre, 'editor' => $editor, 'author' => $author, 'classification' => $classification ];
+                return [ 'view' => $view, 'data' => $data, 'genre' => $genre, 'editor' => $editor, 'author' => $author, 'classification' => $classification ];
             }
         }
     }
