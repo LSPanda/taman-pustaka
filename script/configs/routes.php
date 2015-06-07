@@ -2,11 +2,11 @@
     // - Init global variables for my roots into the application
     $routes = [
         'default'  => 'index/book',
-        'showGenre' => 'show/genre',
-        'showAuthor' => 'show/author',
-        'showEditor' => 'show/editor',
-        'showChild' => 'show/child',
-        'showTeen' => 'show/teen',
-        'showAdult' => 'show/adult',
+        'indexGenre' => 'index/genre',
+        'indexAuthor' => 'index/author',
+        'indexEditor' => 'index/editor',
+        'indexChild' => 'index/child',
+        'indexTeen' => 'index/teen',
+        'indexAdult' => 'index/adult',
         'viewBook' => 'view/book',
     ];

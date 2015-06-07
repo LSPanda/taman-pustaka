@@ -8,7 +8,7 @@
 </div>
 <div class="header__navigation clearfix">
   <nav class="navigation__nav">
-    <h2 class="hidden">Menu de navigation de la bibliothèque</h2><span class="inline-block nav__element"><a href="index.php" class="removeLink element__link">Accueil</a></span><span class="inline-block nav__element"><a href="?a=show&e=genre" class="removeLink element__link">Genres</a></span><span class="inline-block nav__element"><a href="?a=show&e=author" class="removeLink element__link">Auteurs</a></span><span class="inline-block nav__element"><a href="?a=show&e=editor" class="removeLink element__link">Éditeurs</a></span>
+    <h2 class="hidden">Menu de navigation de la bibliothèque</h2><span class="inline-block nav__element"><a href="index.php" class="removeLink element__link">Accueil</a></span><span class="inline-block nav__element"><a href="?a=index&e=genre" class="removeLink element__link">Genres</a></span><span class="inline-block nav__element"><a href="?a=index&e=author" class="removeLink element__link">Auteurs</a></span><span class="inline-block nav__element"><a href="?a=index&e=editor" class="removeLink element__link">Éditeurs</a></span>
   </nav>
   <div class="navigation__search">
     <form action="#" method="post" class="form__search">

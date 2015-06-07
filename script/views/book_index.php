@@ -1,18 +1,18 @@
 <h2 class="hidden">Lister notre bibliothèque par...</h2>
 <div class="content__short clearfix">
-  <a href="?a=show&e=genre">
+  <a href="?a=index&e=genre">
     <section class="container content__genre">
       <h3 class="hidden">Genre</h3>
       <p class="gamma category">Genre</p>
     </section>
   </a>
-  <a href="?a=show&e=author">
+  <a href="?a=index&e=author">
     <section class="container content__author">
       <h3 class="hidden">Auteur</h3>
       <p class="gamma category">Auteur</p>
     </section>
   </a>
-  <a href="?a=show&e=editor">
+  <a href="?a=index&e=editor">
     <section class="container content__editor">
       <h3 class="hidden">Éditeur</h3>
       <p class="gamma category">Éditeur</p>
