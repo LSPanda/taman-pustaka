@@ -46,11 +46,21 @@
                 return [ 'view' => $view, 'data' => $data ];
             }
 
-            // Take data + construct view
-            //$data = $this -> modelBook -> getAll();
-            //$view = $e . VIEW_DELIMITER . $a . '.php';
+        }
 
-            //return [ 'view' => $view, 'data' => $data ];
+        public function view()
+        {
+            //Take my variable to global scope
+            global $a, $e;
+
+            //Take the selected book.
+            if( isset( $_GET[ 'book_id' ] ) )
+            {
+                $data = $this -> modelBook -> getByBookId( $_GET[ 'book_id' ] );
+                $view = $e . VIEW_DELIMITER . $a . '.php';
+
+                return [ 'view' => $view, 'data' => $data ];
+            }
         }
 
     }

@@ -23,7 +23,7 @@
 <div class="container content__random">
     <h3 class="gamma">Derniers livres ajoutés à la bibliothèque</h3>
     <?php foreach( $data[ 'data' ] as $book ): ?>
-    <a href="?a=view&e=book&id=<?php echo( $book -> id ); ?>">
+    <a href="?a=view&e=book&book_id=<?php echo( $book -> id ); ?>">
         <div class="random__block">
             <img src="css/images/books/<?php echo( $book -> cover ); ?>" alt="<?php echo( $book -> title ); ?>">
             <h4 class="zeta random__title"><?php echo( $book -> title ); ?></h4>
