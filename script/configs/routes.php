@@ -6,5 +6,6 @@
         'viewBook' => 'view/book',
         'indexGenre' => 'index/genre',
         'indexAuthor' => 'index/author',
+        'viewAuthor' => 'view/author',
         'indexEditor' => 'index/editor'
     ];
