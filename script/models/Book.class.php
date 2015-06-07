@@ -49,4 +49,11 @@
 
             return $pdost -> fetchAll();
         }
+
+        public function create( $title, $alt, $summary, $exerc, $genre, $editor, $author, $classification, $address )
+        {
+            $sql = 'INSERT INTO books ( title, alt, summary, exerc, genre_id, editor_id, author_id, classification_id, cover ) VALUES ( :title, :alt, :summary, :exerc, :genre, :editor, :author, :classification, :cover )';
+            $pdost = $this -> dbConn -> prepare( $sql );
+            $pdost -> execute( [ ':title' => $title, ':alt' => $alt, ':summary' => $summary, ':exerc' => $exerc, ':genre' => $genre, ':editor' => $editor, ':author' => $author, ':classification' => $classification, ':cover' => $address ] );
+        }
     }

@@ -63,4 +63,105 @@
             }
         }
 
+        public function create()
+        {
+            //Take my variable to global scope
+            global $a, $e;
+
+            //Test method
+            if( $_SERVER[ 'REQUEST_METHOD' ] == "POST" )
+            {
+                $request = $_POST;
+                $title = $request[ 'title' ];
+                $alt = $request[ 'alt' ];
+                $summary = $request[ 'summary' ];
+                $exerc = $request[ 'exerc' ];
+                $genre = $request[ 'genre' ];
+                $editor = $request[ 'editor' ];
+                $author = $request[ 'author' ];
+                $classification = $request[ 'classification' ];
+
+                $address = false;
+
+                if( !$_FILES[ 'cover' ][ 'error' ] )
+                {
+                    $nameparts = explode( '.', $_FILES[ 'cover' ][ 'name' ] );
+                    $newname= 'b'. time() . '.' .end( $nameparts );
+                    if( !@move_uploaded_file( $_FILES[ 'cover' ][ 'tmp_name' ], './css/images/books/' . $newname ) )
+                    {
+                      die( 'Il y a eu un problème' );
+                    }
+
+                    $address = $newname;
+                }
+                $this -> modelBook -> create( $title, $alt, $summary, $exerc, $genre, $editor, $author, $classification, $address );
+
+                header( 'Location:index.php?a=admin&e=user' );
+            }
+            else
+            {
+                $view = $e .VIEW_DELIMITER . $a . '.php';
+                $genre = new Genre();
+                $genre = $genre -> getAll();
+                $editor = new Editor();
+                $editor = $editor -> getAll();
+                $author = new Author();
+                $author = $author -> getAll();
+                $classification = new Classification();
+                $classification = $classification -> getAll();
+
+                return [ 'view' => $view, 'genre' => $genre, 'editor' => $editor, 'author' => $author, 'classification' => $classification ];
+            }
+        }
+        public function update()
+        {
+            //Take my variable to global scope
+            global $a, $e;
+
+            //Test method
+            if( $_SERVER[ 'REQUEST_METHOD' ] == "POST" )
+            {
+                $request = $_POST;
+                $title = $request[ 'title' ];
+                $alt = $request[ 'alt' ];
+                $summary = $request[ 'summary' ];
+                $exerc = $request[ 'exerc' ];
+                $genre = $request[ 'genre' ];
+                $editor = $request[ 'editor' ];
+                $author = $request[ 'author' ];
+                $classification = $request[ 'classification' ];
+
+                $address = false;
+
+                if( !$_FILES[ 'cover' ][ 'error' ] )
+                {
+                    $nameparts = explode( '.', $_FILES[ 'cover' ][ 'name' ] );
+                    $newname= 'b'. time() . '.' .end( $nameparts );
+                    if( !@move_uploaded_file( $_FILES[ 'cover' ][ 'tmp_name' ], './css/images/books' . $newname ) )
+                    {
+                      die( 'Il y a eu un problème' );
+                    }
+
+                    $adress = './css/images/books' . $newname;
+                }
+                $this -> modeleBook -> update( $title, $alt, $summary, $exerc, $genre, $editor, $author, $classification, $address );
+
+                header( 'Location:index.php?a=admin&e=user' );
+            }
+            else
+            {
+                $view = $e .VIEW_DELIMITER . $a . '.php';
+                $genre = new Genre();
+                $genre = $genre -> getAll();
+                $editor = new Editor();
+                $editor = $editor -> getAll();
+                $author = new Author();
+                $author = $author -> getAll();
+                $classification = new Classification();
+                $classification = $classification -> getAll();
+                $data = $this -> modeleBook -> getByBookId( $id );
+
+                return [ 'view' => $view, 'genre' => $genre, 'editor' => $editor, 'author' => $author, 'classification' => $classification ];
+            }
+        }
     }
