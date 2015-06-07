@@ -9,5 +9,7 @@
         'viewAuthor' => 'view/author',
         'indexEditor' => 'index/editor',
         'viewEditor' => 'view/editor',
-        'signinUser' => 'signin/user'
+        'signinUser' => 'signin/user',
+        'connectUser' => 'connect/user',
+        'disconnectUser' => 'disconnect/user'
     ];

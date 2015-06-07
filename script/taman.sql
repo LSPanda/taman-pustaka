@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Dim 07 Juin 2015 à 17:26
+-- Généré le :  Dim 07 Juin 2015 à 20:23
 -- Version du serveur :  5.5.38
 -- Version de PHP :  5.6.2
 
@@ -154,6 +154,25 @@ INSERT INTO `genres` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (7, 'Espionnage', '2015-06-07 09:39:24', '0000-00-00 00:00:00'),
 (8, 'Erotique', '2015-06-07 09:39:47', '0000-00-00 00:00:00');
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+`id` int(11) NOT NULL,
+  `mail` varchar(225) COLLATE utf8_bin NOT NULL,
+  `password` varchar(225) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` (`id`, `mail`, `password`) VALUES
+(1, 'Lsd.Simpson@gmail.com', '965ddaa6a511fe898fb82a9cbee43859ab84ad56');
+
 --
 -- Index pour les tables exportées
 --
@@ -189,6 +208,12 @@ ALTER TABLE `genres`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT pour les tables exportées
 --
 
@@ -202,3 +227,8 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 ALTER TABLE `classifications`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
