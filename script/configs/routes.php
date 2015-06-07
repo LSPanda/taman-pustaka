@@ -7,5 +7,6 @@
         'indexGenre' => 'index/genre',
         'indexAuthor' => 'index/author',
         'viewAuthor' => 'view/author',
-        'indexEditor' => 'index/editor'
+        'indexEditor' => 'index/editor',
+        'viewEditor' => 'view/editor'
     ];
